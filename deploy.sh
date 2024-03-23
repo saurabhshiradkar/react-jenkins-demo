@@ -18,7 +18,7 @@ fi
 pm2 stop ecosystem.config.js
 
 # install nodejs
-npm install
+sudo npm install
 
 # start app with pm2
 pm2 start ecosystem.config.js
