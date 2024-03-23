@@ -23,13 +23,13 @@ if [ -n "$PID" ]; then
 fi
 
 # stop pm2 process
-pm2 stop ecosystem.config.js
+sudo pm2 stop ecosystem.config.js
 
 # install nodejs
-npm install
+sudo npm install
 
 # start app with pm2
-pm2 start ecosystem.config.js
+sudo pm2 start ecosystem.config.js
 
 # Output
 echo "The Deployment is successful, running on port 3000 with a new PID of instance & pm2"
