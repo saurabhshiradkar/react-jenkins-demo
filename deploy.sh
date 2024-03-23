@@ -22,14 +22,14 @@ if [ -n "$PID" ]; then
     su -c "kill -9 $PID" -s /bin/bash root
 fi
 
-# Stop pm2 process
-sudo pm2 stop ecosystem.config.js
+# stop pm2 process
+pm2 stop ecosystem.config.js
 
-# Install Node.js dependencies
-sudo npm install
+# install nodejs
+npm install
 
-# Start app with pm2
-sudo pm2 start ecosystem.config.js
+# start app with pm2
+pm2 start ecosystem.config.js
 
 # Output
 echo "The Deployment is successful, running on port 3000 with a new PID of instance & pm2"
